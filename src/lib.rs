@@ -1,6 +1,9 @@
 pub fn find() -> String {
-    if let Ok(clang) = std::env::var("CLANG") {
-        return iter(vec![clang]);
+    if let Ok(ok) = std::env::var("CLANG") {
+        return iter(vec![ok]);
+    }
+    if let Ok(ok) = std::env::var("CLANG_VERSION") {
+        return iter(vec![format!("clang-{}", ok)]);
     }
     return iter(
         (17..=30)

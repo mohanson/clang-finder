@@ -9,7 +9,7 @@ Primary use case: call it from `build.rs` to ensure native build steps use clang
 ```toml
 [dependencies]
 cc = "1"
-clang-finder = "0.1.0"
+clang-finder = "0.1"
 ```
 
 ```rust
