@@ -5,12 +5,23 @@ pub fn find() -> String {
     if let Ok(ok) = std::env::var("CLANG_VERSION") {
         return iter(vec![format!("clang-{}", ok)]);
     }
-    return iter(
-        (17..=30)
-            .rev()
-            .map(|ver| format!("clang-{}", ver))
-            .collect::<Vec<String>>(),
-    );
+    return iter(vec![
+        "clang".to_string(),
+        "clang-30".to_string(),
+        "clang-29".to_string(),
+        "clang-28".to_string(),
+        "clang-27".to_string(),
+        "clang-26".to_string(),
+        "clang-25".to_string(),
+        "clang-24".to_string(),
+        "clang-23".to_string(),
+        "clang-22".to_string(),
+        "clang-21".to_string(),
+        "clang-20".to_string(),
+        "clang-19".to_string(),
+        "clang-18".to_string(),
+        "clang-17".to_string(),
+    ]);
 }
 
 pub fn iter(array: Vec<String>) -> String {
