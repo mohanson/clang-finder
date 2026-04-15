@@ -1,6 +1,6 @@
 [package]
 name = "clang-finder"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2024"
 description = "Locate an available clang executable on the system, primarily for use in build.rs scripts."
 license = "MIT"
